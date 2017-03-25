@@ -18,11 +18,6 @@ h6 {
     overflow: auto;
 }
 
-.education-entry,
-.work-entry,
-.project-entry {
-    padding: 0 5%;
-}
 
 h1 {
     font-size: 40px;
@@ -36,7 +31,8 @@ h2 {
     font-size: 24px;
     color: #999;
     line-height: 29px;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 h3 {
@@ -53,12 +49,7 @@ h4 {
     line-height: 17px;
 }
 
-h2,
-h3,
-h4,
-h5 {
-    padding: 10px 5%;
-}
+
 
 .date-text {
     font-style: italic;
@@ -125,7 +116,7 @@ a {
 }
 
 /* TODO: Replace with image later */
-#header {
+#headerwrapper {
     background-color: #484848;
 }
 
@@ -168,9 +159,6 @@ span {
     padding: 5px;
 }
 
-#lets-connect {
-    text-align: center;
-}
 
 /* Media queries to handle various device widths */
 
@@ -203,7 +191,7 @@ span {
 #map {
     display: block;
     height: 100%;
-    margin: 0 5%;
+
 }
 
 #mapDiv {

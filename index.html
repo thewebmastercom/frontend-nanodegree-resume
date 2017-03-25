@@ -13,33 +13,59 @@
 </head>
 
 <body>
-    <div id="main">
-        <div id="header" class="center-content clear-fix">
-            <ul id="topContacts" class="flex-box"></ul>
-        </div>
-        <div style="clear: both;"></div>
-        <div id="workExperience" class="gray">
-            <h2>Work Experience</h2>
-        </div>
-        <div id="projects">
-            <h2>Projects</h2>
-        </div>
-        <div id="education" class="gray">
+
+  <div id="headerwrapper" class="row expanded center-content">
+    <div id="header" class="row">
+      <div class="small-12 large-12 columns">
+        <ul id="topContacts" class="flex-box"></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="row expanded gray">
+    <div id="workExperience" class="row">
+      <div class="small-12 large-12 columns">
+        <h2>Work Experience</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="row expanded">
+      <div id="projects" class="row">
+        <div class="small-12 large-12 columns">
+          <h2>Projects</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="row expanded gray">
+        <div id="education" class="row">
+          <div class="small-12 large-12 columns">
             <h2>Education</h2>
+          </div>
         </div>
+      </div>
+
+  <div class="row expanded">
+    <div class="row">
+      <div id="education" class="small-12 large-12 columns">
         <div id="mapDiv">
             <h2>Where I've Lived and Worked</h2>
         </div>
+      </div>
+    </div>
+  </div>
+
         <div id="lets-connect" class="dark-gray">
-            <h2 class="orange center-text">Let's Connect</h2>
+            <h2 class="orange text-center">Let's Connect</h2>
             <ul id="footerContacts" class="flex-box">
             </ul>
         </div>
-    </div>
+
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
-    <script src="js/foundation.js"></script>
+    <script src="js/vendor/foundation.js"></script>
     <script>
       $(document).foundation();
     </script>
