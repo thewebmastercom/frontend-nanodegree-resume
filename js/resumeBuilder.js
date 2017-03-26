@@ -98,7 +98,7 @@ var projects = {
         "title": "Top 30 Movies For Programmers",
         "dates": "01-02-2017 - Present",
         "description": "A list of the top 30 movies for programmers",
-        "images": ["images/movie-project.jpg"]
+        "images": ["images/movie-project.jpg", "images/movies-2.jpg"]
     }]
 };
 
@@ -157,9 +157,12 @@ projects.display = function() {
         $(".project-entry:last").append(formattedProjectDates);
         var formattedProjectDescription = HTMLprojectDescription.replace("%data%", project.description);
         $(".project-entry:last").append(formattedProjectDescription);
-        var formattedProjectImage = HTMLprojectImage.replace("%data%", project.images);
-        $(".project-entry:last").append(formattedProjectImage);
+        project.images.forEach(function(image) {
+            var formattedProjectImage = HTMLprojectImage.replace("%data%", image);
+            $(".project-entry:last").append(formattedProjectImage);
+        });
     });
+
 };
 
 
