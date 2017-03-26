@@ -12,22 +12,21 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><hr>';
+var HTMLheaderName = '<h1 class="name">%data%</h1>';
+var HTMLheaderRole = '<div class="role">%data%</div>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLcontactGeneric = '<li class="flex-item"><span>%contact%</span><span>%data%</span></li>';
+var HTMLmobile = '<li class="flex-item"><i class="fi-mobile"></i><span >%data%</span></li>';
+var HTMLemail = '<li class="flex-item"><i class="fi-mail"></i><span >%data%</span></li>';
+var HTMLtwitter = '<li class="flex-item"><i class="fi-social-twitter"></i><span>%data%</span></li>';
+var HTMLgithub = '<li class="flex-item"><i class="fi-social-github"></i><span>%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><i class="fi-map"></i><span>%data%</span></li>';
 
-var HTMLbioPic = '<img src="%data%" class="biopic">';
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
+var HTMLbioPic = '<img src="%data%" alt="Portrait photo" class="biopic">';
+var HTMLwelcomeMsg = '<div class="welcome-message">%data%</div>';
 
-var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+var HTMLskillsStart = '<span id="skills-h3">Skills at a Glance:</span>';
+var HTMLskills = '<span>%data%</span>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
@@ -40,7 +39,7 @@ var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectImage = '<img src="%data%" alt="Project image">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
@@ -86,9 +85,7 @@ function logClicks(x,y) {
 };
 
 $(document).click(function(loc) {
-  var x = loc.pageX;
-  var y = loc.pageY;
-  logClicks(x,y);
+
 });
 
 
@@ -179,7 +176,7 @@ function initializeMap() {
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
-      infowindow.open(map, marker);
+      infoWindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.

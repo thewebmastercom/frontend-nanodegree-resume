@@ -1,14 +1,14 @@
 var bio = {
-    "name": "Jonathan Griffin",
-    "role": "The Webmaster",
+    "name": "JONATHAN GRIFFIN",
+    "role": "WEBMASTER",
     "contacts": {
-        "mobile": "Hidden",
+        "mobile": "On request",
         "email": "jonathan@thewebmaster.com",
         "twitter": "@thewebmastercom",
         "github": "thewebmastercom",
         "location": "Wisbech"
     },
-    "welcomeMessage": "Thanks for reading my resume",
+    "welcomeMessage": "I help webmasters, bloggers, and small businesses be successful online.",
     "skills": [
         "Python", "HTML", "CSS", "Javascript"
     ],
@@ -68,7 +68,7 @@ var education = {
             "location": "Wolverhampton",
             "degree": "LPC",
             "majors": ["Legal Practice"],
-            "dates": "1998-2001",
+            "dates": "2001-2002",
             "url": "https://www.wlv.ac.uk/"
         }
     ],
@@ -98,19 +98,19 @@ var projects = {
         "title": "Top 30 Movies For Programmers",
         "dates": "01-02-2017 - Present",
         "description": "A list of the top 30 movies for programmers",
-        "images": ["images/197x148.gif"]
+        "images": ["images/movie-project.jpg"]
     }]
 };
 
 bio.display = function() {
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-    $("#header").prepend(formattedRole);
+    $("#role").prepend(formattedRole);
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     $("#header").prepend(formattedName);
-    var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
-    $("#header").append(formattedBioPic);
     var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-    $("#header").append(formattedWelcomeMsg);
+    $("#role").append(formattedWelcomeMsg);
+    var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+    $("#photo").append(formattedBioPic);
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
     $("#topContacts").prepend(formattedLocation);
     var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
@@ -126,18 +126,9 @@ bio.display = function() {
     $("#footerContacts").prepend(formattedGithub);
     $("#footerContacts").prepend(formattedEmail);
     $("#footerContacts").prepend(formattedMobile);
-
-    if (bio.skills.length > 0) {
-        $("#header").append(HTMLskillsStart);
-        var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-        $("#skills").append(formattedSkill);
-        formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-        $("#skills").append(formattedSkill);
-        formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-        $("#skills").append(formattedSkill);
-        formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-        $("#skills").append(formattedSkill);
-    }
+    $(".description").append(HTMLskillsStart);
+    var formattedSkill = HTMLskills.replace("%data%", bio.skills.join(", "));
+    $(".description").append(formattedSkill);
 };
 
 
