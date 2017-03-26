@@ -1,42 +1,138 @@
 <!DOCTYPE html>
 
-<html>
+<html class="no-js" lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Resume</title>
-    <link href="css/style.css" rel="stylesheet">
-    <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBwJYBdymhRGiALpBtnDDXhzXqUHh7nOu8"></script>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jonathan Griffin</title>
+    <link rel="stylesheet" href="css/foundation.min.css" />
+    <link rel="stylesheet" href="css/foundation-icons/foundation-icons.css" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 </head>
 
 <body>
-    <div id="main">
-        <div id="header" class="center-content clear-fix">
-            <ul id="topContacts" class="flex-box"></ul>
+    <section class="hero">
+        <div id="headerwrapper" class="row expanded center-content">
+            <div id="header" class="row"></div>
+            <div id="role" class="row"></div>
         </div>
-        <div style="clear: both;"></div>
-        <div id="workExperience" class="gray">
-            <h2>Work Experience</h2>
+
+    </section>
+
+
+    <div class="sections row">
+        <div id="docs" class="small-12 large-9 columns">
+            <section id="about" data-magellan-target="about">
+                <div class="row box">
+                    <div id="photo" class="small-12 large-4 columns"></div>
+                    <div class="small-12 large-8 columns description">
+                        <h2>ABOUT</h2>
+                        <p>As current Editor-in-Chief of The Webmaster we aim to provide helpful tips and resources to enable you to be successful online.</p>
+                        <p>As a web developer, digital marketer, and hosting expert, I build, tinker and play around with many things. The ultimate Jack of All trades.
+                    </div>
+                </div>
+
+            </section>
+            <section id="contact" data-magellan-target="contact">
+                <div class="row expanded">
+                    <div class="row">
+                        <div class="small-12 large-12 columns">
+                            <ul id="topContacts" class="flex-box"></ul>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section id="workexp" data-magellan-target="workexp">
+                <div class="row expanded gray">
+                    <div class="row">
+                        <div class="small-12 large-12 columns">
+                            <div id="workExperience">
+                                <h2>Work Experience</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="project" data-magellan-target="project">
+                <div class="row expanded gray">
+                    <div class="row">
+                        <div class="small-12 large-12 columns">
+                            <div id="projects" class="row">
+                                <h2>Projects</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="edu" data-magellan-target="edu">
+                <div class="row expanded gray">
+                    <div class="row">
+                        <div class="small-12 large-12 columns">
+                            <div id="education" class="row">
+
+                                <h2>Education</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="row expanded gray">
+                <div class="row">
+                    <div class="small-12 large-12 columns">
+                        <div id="mapDiv" data-magellan-target="mapDiv">
+                            <h2>Where I've Lived and Worked</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div id="projects">
-            <h2>Projects</h2>
-        </div>
-        <div id="education" class="gray">
-            <h2>Education</h2>
-        </div>
-        <div id="mapDiv">
-            <h2>Where I've Lived and Worked</h2>
-        </div>
-        <div id="lets-connect" class="dark-gray">
-            <h2 class="orange center-text">Let's Connect</h2>
-            <ul id="footerContacts" class="flex-box">
-            </ul>
+        <div id="menus" class="hide-for-small-only large-3 columns sticky-container" data-sticky-container>
+            <nav class="columns sticky is-stuck is-at-top" data-sticky data-anchor="docs" data-sticky-on="large" data-active-class="active" data-threshold="200">
+
+                <ul class="vertical menu" data-magellan data-docs-toc>
+                    <li><a href="#about">About</a>
+                    </li>
+                    <li><a href="#contact">Contact</a>
+                    </li>
+                    <li><a href="#workexp">Work</a>
+                    </li>
+                    <li><a href="#project">Projects</a>
+                    </li>
+                    <li><a href="#edu">Education</a>
+                    </li>
+                    <li><a href="#mapDiv">Map</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
-    <script src="js/jQuery.js"></script>
+
+
+    <div class="row expanded footer">
+        <div class="row">
+            <div id="lets-connect" class="small-12 large-12 columns">
+                <ul id="footerContacts" class="flex-box"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
     <script src="js/helper.js"></script>
     <script src="js/resumeBuilder.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBwJYBdymhRGiALpBtnDDXhzXqUHh7nOu8"></script>
+    </div>
 </body>
 
 </html>
